@@ -2,10 +2,8 @@
 
 ## Screenshots
 
-![Login](resources/Screenshot_2024-10-25-17-27-02-22_d3fabfaec91e1b3b6f11b1c51b284c91.jpg)
-![Register](resources/Screenshot_2024-10-25-17-27-07-56_d3fabfaec91e1b3b6f11b1c51b284c91.jpg)
-![Verify Email](resources/Screenshot_2024-10-25-17-27-41-56_d3fabfaec91e1b3b6f11b1c51b284c91.jpg)
-![Home](resources/Screenshot_2024-10-25-17-27-57-88_d3fabfaec91e1b3b6f11b1c51b284c91.jpg)
+<video controls src="resources/aaktelescience.mp4" title="Demo"></video>
+![screenshots](<resources/Group 1.png>)
 
 # Setup and Installation Guide
 
