@@ -2,7 +2,6 @@
 
 ## Screenshots
 
-![Demo](resources/aaktelescience.gif)
 ![screenshots](<resources/Group 1.png>)
 
 # Setup and Installation Guide
