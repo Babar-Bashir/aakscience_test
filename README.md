@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<video controls src="resources/aaktelescience.mp4" title="Demo"></video>
+![Demo](resources/aaktelescience.gif)
 ![screenshots](<resources/Group 1.png>)
 
 # Setup and Installation Guide
