@@ -1,5 +1,6 @@
 import 'package:aak_tele_science/core/entities/user_type_enum.dart';
 import 'package:aak_tele_science/core/exceptions/server_exception.dart';
+import 'package:aak_tele_science/features/auth/data/model/login_model.dart';
 import 'package:aak_tele_science/features/auth/data/model/user_model.dart';
 import 'package:dio/dio.dart';
 
@@ -12,7 +13,7 @@ abstract interface class AuthRemoteDataSource {
       String email,
       String password,
       String country);
-  Future<UserModel> signInWithEmailAndPassword(String email, String password);
+  Future<LoginModel> signInWithEmailAndPassword(String email, String password);
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
@@ -20,7 +21,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   AuthRemoteDataSourceImpl({required this.dioClient});
 
   @override
-  Future<UserModel> signInWithEmailAndPassword(
+  Future<LoginModel> signInWithEmailAndPassword(
       String email, String password) async {
     try {
       Response response = await dioClient.post('/user_login/', data: {
@@ -32,7 +33,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       if (response.statusCode != 200) {
         throw ServerException(response.toString());
       }
-      return UserModel.fromJson(response.data);
+      return LoginModel.fromJson(response.data);
     } on DioException catch (e) {
       print("DioException is $e");
       throw ServerException(e.response?.data ?? "Unknow Error");

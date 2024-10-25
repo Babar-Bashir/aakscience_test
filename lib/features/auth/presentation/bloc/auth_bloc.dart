@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:aak_tele_science/core/entities/login.dart';
 import 'package:aak_tele_science/core/entities/user.dart';
 import 'package:aak_tele_science/core/entities/user_type_enum.dart';
 import 'package:aak_tele_science/features/auth/domain/usecases/user_login.dart';
@@ -39,7 +40,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     res.fold(
       (failure) => emit(AuthFailure(failure.message)),
       (user) => emit(
-        AuthSuccess(user),
+        LoginAuthSuccess(user),
       ),
     );
   }

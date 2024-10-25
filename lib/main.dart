@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AAK Tele Science',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.lightThemeMode,
       home: const SignInPage(),
     );

@@ -31,16 +31,16 @@ class _SignInPageState extends State<SignInPage> {
         padding: const EdgeInsets.all(15.0),
         child: BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
+            print("login-state is $state");
             if (state is AuthFailure) {
               print("LoginSCREEN ${state.message}");
               showSnackBar(context, jsonDecode(state.message)['detail']);
-
-              if (state is AuthSuccess) {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                    (route) => false);
-              }
+            }
+            if (state is LoginAuthSuccess) {
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  (route) => false);
             }
           },
           builder: (context, state) {

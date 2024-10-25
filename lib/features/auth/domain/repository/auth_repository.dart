@@ -1,3 +1,4 @@
+import 'package:aak_tele_science/core/entities/login.dart';
 import 'package:aak_tele_science/core/entities/user.dart';
 import 'package:aak_tele_science/core/entities/user_type_enum.dart';
 import 'package:aak_tele_science/core/errors/failure.dart';
@@ -12,6 +13,6 @@ abstract interface class AuthRepository {
       required String email,
       required String password,
       required String country});
-  Future<Either<Failure, User>> signInWithEmailAndPassword(
+  Future<Either<Failure, Login>> signInWithEmailAndPassword(
       {required String email, required String password});
 }
